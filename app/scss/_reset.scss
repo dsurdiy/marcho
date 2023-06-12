@@ -16,6 +16,8 @@ h4,
 h5,
 h6,
 p,
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -27,7 +29,6 @@ dd {
 
 ul[class],
 ol[class] {
-  margin: 0;
   padding: 0;
 }
 
