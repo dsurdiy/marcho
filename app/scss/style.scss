@@ -23,7 +23,7 @@
   &__list-link {
     @extend %roboto-400;
     color: $title;
-    padding-bottom: 1px;
+    padding: 0 2px 3px;
     transition: all .3s;
     &:hover {
       @extend %roboto-700;
@@ -71,7 +71,7 @@
   border-bottom: 1px solid #ececec;
   &__logo {
     display: block;
-    margin-bottom: 33px;
+    margin-bottom: 39px;
   }
   &__contact {
     width: 250px;
