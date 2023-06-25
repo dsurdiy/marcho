@@ -417,9 +417,91 @@
 
 .product-item {
   max-width: 370px;
+  text-align: center;
+  &.product-item--list {
+    min-width: 100%;
+    display: flex;
+    text-align: left;
+    &:hover {
+      .product-item__link-box {
+        transform: translateY(-280%);
+      }
+    }
+    .product-item__img-box {
+      height: 250px;
+      min-width: 200px;
+      margin-bottom: 0;
+      img {
+        height: 250px;
+      }
+    }
+    .product-item__link-box {
+      bottom: auto;      
+      background-color: transparent;
+      box-shadow: none;
+      width: 115px;
+      transform: translateY(100%);
+      .product-item__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+      .product-item__link--line {
+        display: none;
+      }
+    }
+    .product-item__content-box {
+      display: block;
+    }
+    .product-item__text {
+      margin-bottom: 25px;
+    }
+    .product-item__wrapper-box {
+      padding: 30px 40px;
+      border: 1px solid #ececec;
+      border-left: none;
+    }
+    .product-item__box {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .product-item__title {
+      width: 100%;
+      order: -1;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+    .product-item__price {
+      order: -1;
+      margin-left: -12px;
+    }
+    .star {
+      margin-left: 23px;
+    }
+    .product-item__btn {
+      padding: 11px 40px;
+      background-color: $title;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: all .3s;
+      &:hover {
+        background-color: $accent;
+        box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+      }
+    }
+  }
+  &__content-box {
+    display: none;
+  }
   &__img-box {
     position: relative;
     height: 370px;
+    overflow: hidden;
     margin-bottom: 25px;
   }
   &__link-box {
@@ -970,6 +1052,73 @@
     padding: 10px 20px;
     border: 1px solid $default;
   }
+}
+
+.shop-content {
+  width: 100%;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ececec;
+    .product-item {
+      margin-bottom: 40px;
+    }
+  }
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border: 1px solid #ececec;
+    margin-bottom: 40px;
+  }
+  &__filter-buttons {
+    display: flex;
+    align-items: center;
+  }
+  &__filter-btn {
+    outline: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 15px;
+    line-height: 0;
+    &.shop-content__filter-btn--active {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.jq-selectbox__select {
+  height: 32px;
+  padding: 0 30px 0 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  @extend %quicksand-500;
+  color: $default;
+  text-shadow: none;
+  &:hover {
+    background: transparent;
+  }
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 10px;
+  height: 5px;
+  border: none;
+  background-image: url("../images/icons/angle-down.svg");
 }
 
 
