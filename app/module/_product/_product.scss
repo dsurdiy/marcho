@@ -102,7 +102,7 @@
   }
   &__img-box {
     position: relative;
-    height: 370px;
+    max-height: 370px;
     overflow: hidden;
     margin-bottom: 25px;
   }
@@ -190,4 +190,29 @@
 
 .star {
   margin: 0 auto;
+}
+
+
+@media (max-width: 860px) {
+  .product {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .product {
+    padding: 60px 0;
+    &__items {
+      grid-template-columns: 1fr;
+    }
+  }
+  .product-item {
+    max-width: 100%;
+    &__images {
+      width: 100%;
+    }
+  }
 }
