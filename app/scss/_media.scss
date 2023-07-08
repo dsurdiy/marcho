@@ -72,6 +72,39 @@
       display: flex;
     }
   }
+  .product-slide {
+    &__thumb {
+      display: none;
+    }
+  }
+  .product-one {
+    &__slide {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .product-one {
+    &__inner {
+      display: block;
+    }
+    &__content {
+      width: 100%;
+    }
+    &__slide {
+      margin-right: 0;
+    }
+  }
+  .product-slide {
+    &__big {
+      width: 100%;
+      img {
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 @media (max-width: 1100px) {
@@ -111,6 +144,35 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  .related {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .comments-form {
+    &__box-input {
+      display: block;
+      margin-bottom: 0;
+    }
+    &__text-input {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__rating-title {
+      display: inline-block;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    &__label {
+      display: block;
+      margin-right: 0;
+    }
+  }
+
 }
 
 @media (max-width: 700px) {
@@ -168,6 +230,29 @@
       grid-template-columns: 1fr;
     }
   }
+  .related {
+    padding: 60px 0;
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .product-tabs {
+    &__top {
+      border-bottom: none;
+    }
+    &__top-item {
+      display: block;
+      & + & {
+        margin-left: 0;
+      }
+    }
+    &__top-item--active::after {
+      bottom: -5px;
+    }
+  }
 }
 
 @media (max-width: 450px) {
@@ -206,6 +291,33 @@
   .pagination {
     &__arrows {
       display: none;
+    }
+  }
+  .product-page {
+    padding: 60px 0;
+  }
+  .product-slide {
+    &__big {
+      img {
+        height: 400px;
+      }
+    } 
+  }
+  .product-filter {
+    &__size {
+      label {
+        margin-right: 0;
+      }
+    }
+  }
+  .comments {
+    &__content-date {
+      display: none;
+    }
+  }
+  .related {
+    &__items {
+      grid-template-columns: 1fr;
     }
   }
 }
